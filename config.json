@@ -1,0 +1,72 @@
+{
+    "baseInterval": 1000,
+    "timeUnits": [
+        "minute",
+        "hour"
+    ],
+    "timeMax": {
+        "minute": 60,
+        "hour": 24
+    },
+    "dateUnits": [
+        "day",
+        "month",
+        "year"
+    ],
+    "weekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+    ],
+    "cycles": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ],
+    "cyclesMax": {
+        "January": 31,
+        "February": 28,
+        "March": 31,
+        "April": 30,
+        "May": 31,
+        "June": 30,
+        "July": 31,
+        "August": 31,
+        "September": 30,
+        "October": 31,
+        "November": 30,
+        "December": 31
+    },
+    "seasons": [
+        "Winter",
+        "Spring",
+        "Summmer",
+        "Autumn"
+    ],
+    "seasonStarts": {
+        "Winter": ["December", 21],
+        "Spring": ["March", 20],
+        "Summer": ["June", 21],
+        "Autumn": ["September", 22]
+    },
+    "sunrise": ["hour", 6],
+    "sunset": ["hour", 19]
+}
+
+
+
+
+
