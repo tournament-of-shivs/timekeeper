@@ -1,5 +1,5 @@
 {
-    "baseInterval": 1000,
+    "baseInterval": 1,
     "timeUnits": [
         "minute",
         "hour"
@@ -10,63 +10,79 @@
     },
     "dateUnits": [
         "day",
+        "weekday",
         "month",
-        "year"
+        "year",
+        "zodiac"
     ],
-    "weekdays": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-    ],
-    "cycles": [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-    ],
-    "cyclesMax": {
-        "January": 31,
-        "February": 28,
-        "March": 31,
-        "April": 30,
-        "May": 31,
-        "June": 30,
-        "July": 31,
-        "August": 31,
-        "September": 30,
-        "October": 31,
-        "November": 30,
-        "December": 31
+    "baseDateUnit": "day",
+    "day":{
+        "baseValue": 1,
+        "increments": ["week", "month"]
+    },
+    "weekday": {
+        "baseValue": 1,
+        "resets": ["weekdays"],
+        "cycles": [
+            {"name": "Monday", "length": 0},
+            {"name": "Tuesday", "length": 0},
+            {"name": "Wednesday", "length": 0},
+            {"name": "Thursday", "length": 0},
+            {"name": "Friday", "length": 0},
+            {"name": "Saturday", "length": 0},
+            {"name": "Sunday", "length": 0}
+        ]
+    },
+    "month": {
+        "baseValue": 1,
+        "increments": ["year"],
+        "resets": ["day"],
+        "cycles": [
+            {"name": "January", "length": 31},
+            {"name": "February", "length": 28},
+            {"name": "March", "length": 31},
+            {"name": "April", "length": 30},
+            {"name": "May", "length": 31},
+            {"name": "June", "length": 30},
+            {"name": "July", "length": 31},
+            {"name": "August", "length": 31},
+            {"name": "September", "length": 30},
+            {"name": "October", "length": 31},
+            {"name": "November", "length": 30},
+            {"name": "December", "length": 31}
+        ],
+    },
+    "year": {
+        "baseValue": 1,
+        "increments": ["zodiac"],
+        "resets": ["month"]
+    },
+    "zodiac": {
+        "baseValue": 1,
+        "resets": ["zodiac"],
+        "cycles": [
+            {"name": "Rat", "length": 0},
+            {"name": "Ox", "length": 0},
+            {"name": "Tiger", "length": 0},
+            {"name": "Rabbit", "length": 0},
+            {"name": "Dragon", "length": 0},
+            {"name": "Snake", "length": 0},
+            {"name": "Horse", "length": 0},
+            {"name": "Sheep", "length": 0},
+            {"name": "Monkey", "length": 0},
+            {"name": "Rooster", "length": 0},
+            {"name": "Dog", "length": 0},
+            {"name": "Pig", "length": 0}
+        ]
     },
     "seasons": [
-        "Winter",
-        "Spring",
-        "Summmer",
-        "Autumn"
+        {"name: "Winter", "start": ["December", 21]},
+        {"name: "Spring", "start": ["March", 20]},
+        {"name: "Summer", "start": ["June", 21]},
+        {"name: "Autumn", "start": ["September", 21]}
     ],
-    "seasonStarts": {
-        "Winter": ["December", 21],
-        "Spring": ["March", 20],
-        "Summer": ["June", 21],
-        "Autumn": ["September", 22]
-    },
     "sunrise": ["hour", 6],
     "sunset": ["hour", 19]
 }
-
-
-
 
 
