@@ -76,10 +76,10 @@
         ]
     },
     "seasons": [
-        {"name: "Winter", "start": ["December", 21]},
-        {"name: "Spring", "start": ["March", 20]},
-        {"name: "Summer", "start": ["June", 21]},
-        {"name: "Autumn", "start": ["September", 21]}
+        {"name": "Winter", "start": ["December", 21]},
+        {"name": "Spring", "start": ["March", 20]},
+        {"name": "Summer", "start": ["June", 21]},
+        {"name": "Autumn", "start": ["September", 21]}
     ],
     "sunrise": ["hour", 6],
     "sunset": ["hour", 19]
